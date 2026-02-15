@@ -1,0 +1,35 @@
+:root {
+  --main-color: #27a0e6;
+}
+
+.navbar {
+  height: 72px;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: 0 6px 20px rgba(39, 160, 230, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LOGO */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #1f2937;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+/* OPTIONAL: subtle hover */
+.logo:hover span {
+  text-shadow: 0 0 12px rgba(39, 160, 230, 0.5);
+}

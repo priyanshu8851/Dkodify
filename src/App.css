@@ -1,0 +1,29 @@
+:root {
+  --main-color: #27a0e6;
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main{
+  display: flex;
+  justify-content: center;
+
+}
+.container{
+  max-width: 1240px;
+  width:100%;
+  padding: 0 10px !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-height: calc(100vh-75px);
+}
+@media screen and (max-width:780px) {
+  .container{
+    flex-direction: column;
+  }
+}
