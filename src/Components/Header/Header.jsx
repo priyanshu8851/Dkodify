@@ -3,10 +3,11 @@ import "./header.css";
 
 const Header = () => {
   return (
-    <nav className="navbar">
-      <div className="logo">  
-       <span>Decod</span>ify
-      </div>
+    <nav className="navbar" aria-label="Main navigation">
+      <a className="logo" href="/" aria-label="Decodify home">
+       <span className="logo-mark" aria-hidden="true">⌘</span>Decodify
+      </a>
+      <span className="header-caption">Understand code with Gemini</span>
     </nav>
   );
 };

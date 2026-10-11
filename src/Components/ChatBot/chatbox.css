@@ -1,0 +1,18 @@
+.chatbox { min-height: 470px; display: flex; flex-direction: column; }
+.chat-heading { padding: 20px 20px 17px; border-bottom: 1px solid var(--line); }
+.chat-heading h2 { margin: 0; font-size: 16px; letter-spacing: -.01em; }
+.chat-heading p { margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.chat-area { flex: 1; min-height: 320px; max-height: 62vh; overflow: auto; padding: 20px; color: #dbe4f5; font-size: 14px; line-height: 1.75; white-space: pre-wrap; overflow-wrap: anywhere; }
+.chat-empty { min-height: 270px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: var(--muted); }
+.chat-empty-icon { width: 42px; height: 42px; margin-bottom: 14px; display: grid; place-items: center; border: 1px solid rgba(139, 124, 255, .24); border-radius: 14px; color: var(--accent-bright); background: rgba(139, 124, 255, .1); font-size: 20px; }
+.chat-empty strong { margin-bottom: 5px; color: #dfe6f5; font-size: 14px; }
+.chat-empty span { max-width: 230px; font-size: 12px; line-height: 1.6; }
+.chat-loading { display: flex; align-items: center; gap: 10px; color: #c5cfe1; }
+.loading-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-bright); box-shadow: 0 0 14px rgba(178, 168, 255, .7); animation: pulse 1s ease-in-out infinite alternate; }
+@keyframes pulse { to { opacity: .35; transform: scale(.72); } }
+.chat-inp { display: flex; align-items: center; gap: 9px; padding: 13px; border-top: 1px solid var(--line); }
+.chat-inp input { min-width: 0; flex: 1; height: 42px; padding: 0 13px; border: 1px solid var(--line); border-radius: 10px; color: #e9eefb; background: #0e1729; font-size: 13px; }
+.chat-inp input::placeholder { color: #7786a0; }
+.chat-inp-btn { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; border-radius: 10px; }
+.chat-footnote { padding: 0 16px 14px; color: #7786a0; text-align: center; font-size: 10px; line-height: 1.5; }
+@media (max-width: 850px) { .chatbox { min-height: 420px; } .chat-area { max-height: none; } }

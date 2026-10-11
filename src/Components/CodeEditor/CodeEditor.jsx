@@ -8,7 +8,6 @@ const CodeEditor = ({code,setCode, loading, explain }) => {
 
     const handleChange= (value) =>{
         setCode(value);
-        console.log(code)
     }
     const handleLang =(e)=>{
         setLang(e.target.value);
@@ -17,13 +16,12 @@ const CodeEditor = ({code,setCode, loading, explain }) => {
     
     return (
         <>
-            <div className="main-editor-screen">
-
+                        <section className="main-editor-screen" aria-label="Code editor">
                         <div className="codeeditor">
                             <div className="editor-nav">
                                 <select className="lang-select" onChange={(e)=>handleLang(e)}>
                                  
-                                    <option value="javascript" defaultChecked={true}>JavaScript</option>
+                                    <option value="javascript">JavaScript</option>
                                     <option value="cpp">C++</option>
                                     <option value="python">Python</option>
                                     <option value="java">Java</option>
@@ -32,17 +30,16 @@ const CodeEditor = ({code,setCode, loading, explain }) => {
                                     <option value="css">CSS</option>
                                 </select>
 
-                                <button onClick={explain} disabled={loading ? true : false} className="explain-btn">
+                                <button onClick={explain} disabled={loading || !code.trim()} className="explain-btn">
                                     {
-                                        loading ? "Anaylsing....." : "Explain Code"
+                                        loading ? "Analyzing…" : "Explain code"
                                     }
                                 </button>
                             </div>
 
-                            <Editor height="60vh" language={lang} value={code}  onChange={handleChange} />;
+                            <Editor height="62vh" language={lang} value={code} onChange={handleChange} theme="vs-dark" options={{ minimap: { enabled: false }, fontSize: 14, lineNumbersMinChars: 3, scrollBeyondLastLine: false, padding: { top: 16 } }} />
                         </div>
-
-                    </div>
+                        </section>
         </>
     )
 }
