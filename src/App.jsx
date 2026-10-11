@@ -1,7 +1,7 @@
 import './App.css'
 import CodeEditor from './Components/CodeEditor/CodeEditor'
 import Header from './Components/Header/Header'
-import Chatbox from './Components/ChatBot/chatBox'
+import Chatbox from './Components/ChatBot/ChatBox'
 import { useState } from 'react'
 
 function App() {
